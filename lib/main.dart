@@ -1,17 +1,16 @@
-  import 'package:flutter/material.dart';
+import 'package:doctor_app/core/routing/app_router.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
-  runApp(const DoctorApp());
+import 'doctor_app.dart';
+
+void main() async {
+  await ScreenUtil.ensureScreenSize();
+  runApp(DoctorApp(
+    appRouter: AppRouter(),
+  ));
+
+  
 }
 
-class DoctorApp extends StatelessWidget {
-  const DoctorApp({super.key});
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Doctor App",
-    );
-  }
-}
+
