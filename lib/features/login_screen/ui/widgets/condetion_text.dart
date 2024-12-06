@@ -29,7 +29,6 @@ class CondetionText extends StatelessWidget {
                 text: " PrivacyPolicy.",
                 style: Styles.font13DarkBulemedium,
               ),
-
             ]
           )
 
