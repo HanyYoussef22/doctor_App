@@ -22,6 +22,11 @@ abstract class Styles {
       fontWeight: FontWeightHelper.medium,
       color: ColorsManger.darkblue
   );
+  static  TextStyle font14Blue = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeightHelper.medium,
+      color: ColorsManger.primaryColor
+  );
   static  TextStyle font13DarkBulemedium = TextStyle(
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.medium,
