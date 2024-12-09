@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
         child: Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(bottom: 40.h, top: 80.h,left: 25.w,right: 25.w),
+              padding: EdgeInsets.symmetric(horizontal: 25.w).copyWith(top: 80.h, bottom: 40.h),
               child:  Column(
                 children: [
                   const WelcomBack(),

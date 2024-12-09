@@ -2,6 +2,9 @@
 import 'package:doctor_app/doctor_app.dart';
 import 'package:flutter/material.dart';
 
+import 'core/di/dependenct_injection.dart';
+
 void main() {
+  setupGitIt();
   runApp( DoctorApp(appRouter: AppRouter(),));
 }
