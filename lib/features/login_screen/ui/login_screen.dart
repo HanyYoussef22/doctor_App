@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/condetion_text.dart';
+import 'widgets/login_bloc_listener.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -22,6 +23,7 @@ class LoginScreen extends StatelessWidget {
                   const EmailAndPassword(),
                   SizedBox(height: 35.h,),
                    const CondetionText(),
+                  const LoginBlocListener(),
 
                 ],
               ),

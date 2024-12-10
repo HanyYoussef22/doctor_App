@@ -4,7 +4,7 @@ part 'api_error_model.g.dart';
 class ApiErrorModel {
  // @JsonKey(name: 'message_error')
   final String? message;
-  final int? status;
+  final bool? status;
   final int? code;
 
   ApiErrorModel({

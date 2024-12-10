@@ -20,7 +20,7 @@ class OnbordingScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                LogoDoctor(),
+                const LogoDoctor(),
                 SizedBox(
                   height: 40.h,
                 ),
@@ -31,7 +31,7 @@ class OnbordingScreen extends StatelessWidget {
                     textAlign: TextAlign.center,),
                     SizedBox(height: 10.h,),
                     CustomButton(text: 'Get Start', onTap: (){
-                      context.pushNamed(Routers.loginScreen);
+                      context.pushReplacementNamed(Routers.loginScreen);
                     }),
                   ],
                 ),
