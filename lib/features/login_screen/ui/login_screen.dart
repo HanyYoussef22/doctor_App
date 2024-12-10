@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/condetion_text.dart';
+import 'widgets/login_bloc_listener.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -14,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         child: Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(bottom: 40.h, top: 80.h,left: 25.w,right: 25.w),
+              padding: EdgeInsets.symmetric(horizontal: 25.w).copyWith(top: 80.h, bottom: 40.h),
               child:  Column(
                 children: [
                   const WelcomBack(),
@@ -22,6 +23,7 @@ class LoginScreen extends StatelessWidget {
                   const EmailAndPassword(),
                   SizedBox(height: 35.h,),
                    const CondetionText(),
+                  const LoginBlocListener(),
 
                 ],
               ),
