@@ -1,6 +1,10 @@
+import 'package:doctor_app/core/helpers/extenation.dart';
 import 'package:doctor_app/core/theming/style/styles.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/routing/routes.dart';
 
 class CondetionText extends StatelessWidget {
   const CondetionText({super.key});
@@ -42,7 +46,10 @@ class CondetionText extends StatelessWidget {
             ),
             TextSpan(
                 text: "Sign Up ",
-                style: Styles.font14Blue
+                style: Styles.font14Blue,
+              recognizer: TapGestureRecognizer()..onTap=(){
+                context.pushReplacementNamed(Routers.signupScreen);
+            }
             )
           ]
         ))
