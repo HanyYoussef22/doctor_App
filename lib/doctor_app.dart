@@ -21,7 +21,7 @@ class DoctorApp extends StatelessWidget {
           primaryColor: ColorsManger.primaryColor,
           scaffoldBackgroundColor: ColorsManger.mainBackgroundColor,
         ),
-        initialRoute: Routers.onBordingScreen,
+        initialRoute: Routers.signupScreen,
         onGenerateRoute: appRouter.generateRouter,
       ),
     );

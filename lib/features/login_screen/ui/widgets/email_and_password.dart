@@ -17,7 +17,7 @@ class EmailAndPassword extends StatefulWidget {
 }
 
 class _EmailAndPasswordState extends State<EmailAndPassword> {
-  bool ObscureText = true;
+  bool obscureText = false;
   bool hasLowerCase = false;
   bool hasUpperCase = false;
   bool hasSpecialCharacters = false;
@@ -62,16 +62,16 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
         AppTextFormField(
           hintText: 'password',
           controller: loginCubit.passController,
-          isObscureText: !ObscureText,
+          isObscureText: !obscureText,
           validator: passValidate,
           suffixIcon: IconButton(
               onPressed: () {
                 setState(() {
-                  ObscureText = !ObscureText;
+                  obscureText = !obscureText;
                 });
               },
               icon:
-                  Icon(ObscureText ? Icons.visibility : Icons.visibility_off)),
+                  Icon(obscureText ? Icons.visibility_off : Icons.visibility)),
         ),
         SizedBox(
           height: 15.h,
