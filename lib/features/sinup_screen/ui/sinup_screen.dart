@@ -21,7 +21,7 @@ class SinupScreen extends StatelessWidget {
                     SizedBox(height: 15.h,),
                     const SinupForm(),
                     SizedBox(height: 15.h,),
-                    AlreadyHaveAccountText()
+                    const AlreadyHaveAccountText()
                   ],
                 ),
               ),
