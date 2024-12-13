@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:doctor_app/core/di/dependenct_injection.dart';
 import 'package:doctor_app/core/networking/api_service.dart';
 import 'package:doctor_app/core/routing/routes.dart';
+import 'package:doctor_app/features/home_screen/ui/home_screen.dart';
 import 'package:doctor_app/features/login_screen/logic/login_cubit.dart';
 import 'package:doctor_app/features/login_screen/ui/login_screen.dart';
 import 'package:doctor_app/features/onBordingScreen/ui/onbording_screen.dart';
@@ -33,6 +34,10 @@ class AppRouter {
                 create: (context) => getIt<SinupCubit>(),
                 child: const SinupScreen(),
               ),
+        );
+      case Routers.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
         );
 
 
