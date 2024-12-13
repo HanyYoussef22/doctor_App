@@ -12,6 +12,14 @@ abstract class Styles {
   fontSize: 24.sp,
   fontWeight: FontWeight.w700
    );
+  static  TextStyle font18BlackW700 = TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeight.w700
+  );
+  static  TextStyle font18White = TextStyle(
+      fontSize: 18.sp,
+      color: ColorsManger.whiteColor
+  );
   static  TextStyle font16semiBold = TextStyle(
       fontSize: 16.sp,
       fontWeight: FontWeightHelper.semiBold,
@@ -36,6 +44,11 @@ abstract class Styles {
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.regular,
       color: ColorsManger.darkblue
+  );
+  static  TextStyle font13Buleregular = TextStyle(
+      fontSize: 13.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: ColorsManger.primaryColor
   );
   static  TextStyle font13Gryregular = TextStyle(
       fontSize: 13.sp,
@@ -62,11 +75,7 @@ abstract class Styles {
       fontWeight: FontWeightHelper.medium,
       color: ColorsManger.lightgrey
   );
-  static  TextStyle font13Buleregular = TextStyle(
-      fontSize: 13.sp,
-      fontWeight: FontWeightHelper.regular,
-      color: ColorsManger.primaryColor
-  );
+
   static TextStyle font14BlueSemiBold = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.semiBold,

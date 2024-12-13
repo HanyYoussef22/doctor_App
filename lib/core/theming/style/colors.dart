@@ -6,8 +6,9 @@ class ColorsManger {
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color lighterGray = Color(0xFFFDFDFF);
   static const Color lightgrey =  Color(0xFFC2C2C8);
+  static const Color offwhite =  Color(0xFFEDEDED);
   static const Color darkblue = Color(0xFF242424);
-  static const Color moreLightGray = Color(0xFFFDFDFF);
+  static const Color moreLightGray = Color(0xFFF5F5F5);
 
 
 
