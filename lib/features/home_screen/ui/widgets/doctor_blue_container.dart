@@ -31,7 +31,8 @@ class DoctorBlueContainer extends StatelessWidget {
               children: [
                 Text('Book and \nschedule with \nnearest doctor',style: Styles.font18White,),
                 SizedBox(height: 15.h,),
-                Expanded(
+                SizedBox(
+                  height: 35.h,
                   child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
                     backgroundColor: ColorsManger.whiteColor,
                     shape: RoundedRectangleBorder(

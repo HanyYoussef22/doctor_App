@@ -16,6 +16,10 @@ abstract class Styles {
       fontSize: 18.sp,
       fontWeight: FontWeight.w700
   );
+  static  TextStyle font18BlackW600 = TextStyle(
+      fontSize: 17.sp,
+      fontWeight: FontWeight.w600
+  );
   static  TextStyle font18White = TextStyle(
       fontSize: 18.sp,
       color: ColorsManger.whiteColor
@@ -86,6 +90,15 @@ abstract class Styles {
     fontSize: 15.sp,
     fontWeight: FontWeightHelper.medium,
     color: ColorsManger.darkblue,
+  );
+  static  TextStyle font12BlueRugular = TextStyle(
+    fontSize: 12.sp,
+    color:ColorsManger.darkblue
+  );
+  static  TextStyle font14LightGry = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: ColorsManger.greyColor
   );
 
 }

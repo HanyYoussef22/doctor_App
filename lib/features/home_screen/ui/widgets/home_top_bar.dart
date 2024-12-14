@@ -52,28 +52,7 @@ class NotificationIcon extends StatelessWidget {
         ),
 
 
-        // Container(
-        //   height: 50,
-        //   width: 50,
-        //   decoration: const BoxDecoration(
-        //       color: ColorsManger.offwhite,
-        //       shape: BoxShape.circle
-        //   ),
-        // ),
-        // SizedBox(
-        //     height: 30,
-        //     width: 30,
-        //     child: SvgPicture.asset("assets/svgs/alert.svg")
-        // ),
-        // Positioned(
-        //   top: 10,
-        //   right: 13,
-        //   child: SizedBox(
-        //       height: 9,
-        //       width: 9,
-        //       child: SvgPicture.asset("assets/svgs/notif.svg")
-        //   ),
-        // ),
+
 
       ],
     );
