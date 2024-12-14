@@ -5,6 +5,7 @@ class ColorsManger {
   static const Color mainBackgroundColor = Color(0xFFFFFFFF);
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color lighterGray = Color(0xFFFDFDFF);
+  static const Color lighterBlue = Color(0xFFF4F8FF);
   static const Color lightgrey =  Color(0xFFC2C2C8);
   static const Color offwhite =  Color(0xFFEDEDED);
   static const Color darkblue = Color(0xFF242424);
