@@ -9,45 +9,53 @@ class DoctorBlueContainer extends StatelessWidget {
   const DoctorBlueContainer({super.key});
 
   @override
-
   Widget build(BuildContext context) {
     return SizedBox(
       height: 200.h,
-      child: Stack(
-        alignment: Alignment.bottomRight,
-        children:[
-          Container(
-            width: double.infinity,
+      child: Stack(alignment: Alignment.bottomRight, children: [
+        Container(
+          width: double.infinity,
           height: 165.h,
-          padding:  EdgeInsets.symmetric(horizontal: 16.h, vertical: 16.w),
-
-            decoration: BoxDecoration(
+          padding: EdgeInsets.symmetric(horizontal: 16.w, ).copyWith(top: 13.h),
+          decoration: BoxDecoration(
               color: Colors.blue,
               borderRadius: BorderRadius.circular(24),
-              image: const DecorationImage(image: AssetImage("assets/images/home_blue_continer.png"),fit: BoxFit.cover)
-            ),
-            child:  Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Book and \nschedule with \nnearest doctor',style: Styles.font18White,),
-                SizedBox(height: 15.h,),
-                SizedBox(
-                  height: 35.h,
-                  child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
-                    backgroundColor: ColorsManger.whiteColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                  ), child:
-                  Text('Find Nearby',style: Styles.font13Buleregular,),
-
+              image: const DecorationImage(
+                  image: AssetImage("assets/images/home_blue_continer.png"),
+                  fit: BoxFit.cover)),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Book and \nschedule with \nnearest doctor',
+                style: Styles.font18White,
+              ),
+              SizedBox(
+                height: 5.h,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: ColorsManger.whiteColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
                   ),
-                ) ],
-            ),
+                ),
+                child: Text(
+                  'Find Nearby',
+                  style: Styles.font13Buleregular,
+                ),
+              )
+            ],
+          ),
         ),
-          Image.asset(height: 195.h, width: 180.w,
-            "assets/images/doc.png",)]
-      ),
+        Image.asset(
+          height: 195.h,
+          width: 180.w,
+          "assets/images/doc.png",
+        )
+      ]),
     );
   }
 }
