@@ -1,11 +1,10 @@
 import 'package:doctor_app/features/home_screen/ui/widgets/doctor_blue_container.dart';
-import 'package:doctor_app/features/home_screen/ui/widgets/doctor_list_view.dart';
 import 'package:doctor_app/features/home_screen/ui/widgets/doctor_speciality_see_all.dart';
 import 'package:doctor_app/features/home_screen/ui/widgets/home_top_bar.dart';
+import 'package:doctor_app/features/home_screen/ui/widgets/specialition_bloc_buider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'widgets/doctor_specaility_list_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,12 +22,10 @@ class HomeScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                HomeTopBar(),
+                 HomeTopBar(),
                 DoctorBlueContainer(),
                 DoctorSpecialitySeeAll(),
-                DoctorSpecialityListView(),
-                RecommendationDoctor(),
-                DoctorListView()
+                SpecialitionBlocBuider(),
               ],
             ),
           ),
