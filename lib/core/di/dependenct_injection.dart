@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:doctor_app/core/networking/api_service.dart';
 import 'package:doctor_app/core/networking/dio_factor.dart';
+import 'package:doctor_app/features/home_screen/data/repo/home_repo.dart';
+import 'package:doctor_app/features/home_screen/logic/home_cubit.dart';
 import 'package:doctor_app/features/login_screen/data/repo/login_repo.dart';
 import 'package:doctor_app/features/login_screen/logic/login_cubit.dart';
 import 'package:doctor_app/features/sinup_screen/data/repo/sin_up_repo.dart';
@@ -15,12 +17,18 @@ void setupGitIt() {
 
   // Login DI
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
-
-  getIt.registerLazySingleton<LoginCubit>(()=> LoginCubit(getIt())) ;
+  getIt.registerFactory<LoginCubit>(()=> LoginCubit(getIt())) ;
 
 //SinUp
   getIt.registerLazySingleton<SinUpRepo>(() => SinUpRepo(getIt()));
+  getIt.registerFactory<SinupCubit>(()=> SinupCubit(getIt())) ;
 
-  getIt.registerLazySingleton<SinupCubit>(()=> SinupCubit(getIt())) ;
+  //Home
+  // registers a type as Singleton by passing a factory function that will be called on the first call
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
+
+  // كل مره بيكريت نسخه جديدة هو كدا مالوش لازمه
+  // registers a type so that a new instance will be created on each call of get
+  getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
 
 }

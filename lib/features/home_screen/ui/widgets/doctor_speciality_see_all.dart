@@ -28,3 +28,30 @@ class DoctorSpecialitySeeAll extends StatelessWidget {
     );
   }
 }
+
+
+class RecommendationDoctor extends StatelessWidget {
+  const RecommendationDoctor({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          'Recommendation Doctor',
+          style: Styles.font18BlackW600,
+        ),
+        const Spacer(),
+        TextButton(
+          onPressed: () {  },
+          child: Text(
+            'See All',
+            style:Styles.font14Blue,
+          ),
+        ),
+
+
+      ],
+    );
+  }
+}

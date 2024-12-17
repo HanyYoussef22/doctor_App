@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:doctor_app/core/di/dependenct_injection.dart';
 import 'package:doctor_app/core/networking/api_service.dart';
 import 'package:doctor_app/core/routing/routes.dart';
+import 'package:doctor_app/features/home_screen/data/repo/home_repo.dart';
+import 'package:doctor_app/features/home_screen/logic/home_cubit.dart';
 import 'package:doctor_app/features/home_screen/ui/home_screen.dart';
 import 'package:doctor_app/features/login_screen/logic/login_cubit.dart';
 import 'package:doctor_app/features/login_screen/ui/login_screen.dart';
@@ -13,7 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
-  Route generateRouter(RouteSettings settings) {
+  Route? generateRouter(RouteSettings settings) {
     switch (settings.name) {
       case Routers.onBordingScreen:
         return MaterialPageRoute(
@@ -37,19 +39,16 @@ class AppRouter {
         );
       case Routers.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) =>
+              BlocProvider(
+                create: (context) => HomeCubit(getIt())..getSpecialization(),
+                child: const HomeScreen(),
+              ),
         );
 
 
       default:
-        return MaterialPageRoute(
-            builder: (context) =>
-                Scaffold(
-                  body: Center(
-                    child: Text('no route defiend for ${settings.name}'),
-                  ),
-                )
-        );
+        return null;
     }
   }
 }
