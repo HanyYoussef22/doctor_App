@@ -1,3 +1,5 @@
+import 'package:doctor_app/core/helpers/constants.dart';
+import 'package:doctor_app/core/helpers/shared_perfrance_helper.dart';
 import 'package:doctor_app/core/networking/api_error_handeler.dart';
 import 'package:doctor_app/features/sinup_screen/data/models/sinup_body.dart';
 import 'package:doctor_app/features/sinup_screen/data/repo/sin_up_repo.dart';
@@ -27,9 +29,14 @@ class SinupCubit extends Cubit<SinupState> {
       passwordconfirmation: passConformController.text,
     ));
     response.when(success: (sinupResponse) {
+       var token = sinupResponse.data?.token;
+      saveUserToken(token ?? '');
       emit(SinupState.success(sinupResponse));
     }, failure: (error) {
       emit(SinupState.error(error: error.apiErrorModel.message ?? ''));
     });
+  }
+  void saveUserToken(String token ) async{
+    await SharedPrefHelper.setData(SharedPrefKeys.userToken, token);
   }
 }
