@@ -1,5 +1,6 @@
 import 'package:doctor_app/core/helpers/constants.dart';
 import 'package:doctor_app/core/helpers/shared_perfrance_helper.dart';
+import 'package:doctor_app/core/networking/dio_factor.dart';
 import 'package:doctor_app/features/login_screen/data/models/login_request_body.dart';
 import 'package:doctor_app/features/login_screen/data/repo/login_repo.dart';
 import 'package:doctor_app/features/login_screen/logic/login_state.dart';
@@ -30,5 +31,6 @@ class LoginCubit extends Cubit<LoginState> {
   }
   void saveUserToken(String token) async {
     await SharedPrefHelper.setData(SharedPrefKeys.userToken, token);
+    DioFactory.refreshDioHeader();
   }
 }
