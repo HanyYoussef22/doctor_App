@@ -7,6 +7,8 @@ import 'package:doctor_app/features/sinup_screen/logic/sinup_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/networking/dio_factor.dart';
+
 class SinupCubit extends Cubit<SinupState> {
   final SinUpRepo _sinUpRepo;
   final formKey = GlobalKey<FormState>();
@@ -38,5 +40,6 @@ class SinupCubit extends Cubit<SinupState> {
   }
   void saveUserToken(String token ) async{
     await SharedPrefHelper.setData(SharedPrefKeys.userToken, token);
+    DioFactory.refreshDioHeader();
   }
 }
